@@ -1,0 +1,22 @@
+{
+    "name" : "srcdslog",
+    "description" : "SRCDS realtime log parsing module",
+    "version" : "0.1.0",
+    "author" : "Jani Luukko <jj.luukko@gmail.com>",
+    "contributors" : [],
+    "repository" : {
+        "type" : "git",
+        "url" : "http://github.com/JaniL/srcdslog
+    },
+    "bugs" : {
+        "mail" : "jj.luukko@gmail.com",
+        "web" : "http://github.com/JaniL/srcdslog/issues"
+    },
+    "main" : "lib/srcdslog",
+    "engines" : { "node" : ">=0.4.0" },
+    "licenses" : [ {
+        "type" : "GPL",
+        "url" : "http://github.com/JaniL/srcdslog/raw/master/COPYING"
+    } ]
+}
+
