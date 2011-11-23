@@ -3,8 +3,6 @@ srcdslog
 
 Srcdslog is node.js module for parsing srcds's logs.
 
-It's still missing some matching and should be used for one server as it doesn't mention ip and the port in event arguments.
-
 Be warned, this is far from ready.
 
 Usage
