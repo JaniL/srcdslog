@@ -1,7 +1,7 @@
 srcdslog
 ========
 
-Srcdslog is node.js module for parsing srcds's logs, sent by it's logaddress feature.
+Srcdslog is node.js module for parsing srcds's logs.
 
 It's still missing some matching and should be used for one server as it doesn't mention ip and the port in event arguments.
 
@@ -11,18 +11,19 @@ Usage
 -----
 
     var srcdslog = require('./lib/srcdslog.js');
-    var port = 3333;
     
-    var instance = new srcdslog.Parser(port);
-
-Srcdslog listens on the UDP port of your choice for the logs from the Source Dedicated Server's.
-
-Some of the log lines aren't identified, but here's few (there's more) of them that you can try:
-
-    instance.on('connected', function(args) {
-      console.log(args.player.name + '(' + args.player.steamid + ') connected to the server.');
+    srcdslog.parseLine("L 11/23/2011 - 14:30:01: "Jarppa!<4><STEAM_0:0:17784529><Blue>" say "asd"",function(info) {
+      console.log(info);
     });
 
-    instance.on('say', function(args) {
-      console.log(args.player.name + '(' + args.player.steamid + ') said: ' + args.text);
-    });
+Result:
+
+    { type: 'say',
+      player:
+       { name: 'Jarppa!',
+         id: 4,
+         steamid: 'STEAM_0:0:17784529',
+         team: 'Blue' },
+      text: 'fasd' }
+
+Somes lines aren't recognized by srcdslog yet.
