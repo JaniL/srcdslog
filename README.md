@@ -10,7 +10,7 @@ Usage
 
     var srcdslog = require('./lib/srcdslog.js');
     
-    srcdslog.parseLine("L 11/23/2011 - 14:30:01: "Jarppa!<4><STEAM_0:0:17784529><Blue>" say "asd"",function(info) {
+    srcdslog.parseLine('L 11/23/2011 - 14:30:01: "Jarppa!<4><STEAM_0:0:17784529><Blue>' say "asd"",function(info) {
       console.log(info);
     });
 
