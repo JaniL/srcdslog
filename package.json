@@ -6,7 +6,7 @@
     "contributors" : [],
     "repository" : {
         "type" : "git",
-        "url" : "http://github.com/JaniL/srcdslog",
+        "url" : "http://github.com/JaniL/srcdslog"
     },
     "bugs" : {
         "mail" : "jj.luukko@gmail.com",
