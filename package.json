@@ -1,22 +1,32 @@
 {
-    "name" : "srcdslog",
-    "description" : "SRCDS log parsing module",
-    "version" : "0.1.0",
-    "author" : "Jani Luukko <jj.luukko@gmail.com>",
-    "contributors" : [],
-    "repository" : {
-        "type" : "git",
-        "url" : "http://github.com/JaniL/srcdslog"
-    },
-    "bugs" : {
-        "mail" : "jj.luukko@gmail.com",
-        "web" : "http://github.com/JaniL/srcdslog/issues"
-    },
-    "main" : "lib/srcdslog",
-    "engines" : { "node" : ">=0.4.0" },
-    "licenses" : [ {
-        "type" : "GPL",
-        "url" : "http://github.com/JaniL/srcdslog/raw/master/COPYING"
-    } ]
+  "name": "srcdslog",
+  "description": "SRCDS log parsing module",
+  "version": "0.1.0",
+  "author": "Jani Luukko <jj.luukko@gmail.com>",
+  "contributors": [],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/JaniL/srcdslog"
+  },
+  "bugs": {
+    "mail": "jj.luukko@gmail.com",
+    "web": "http://github.com/JaniL/srcdslog/issues"
+  },
+  "main": "lib/parseutils",
+  "engines": {
+    "node": ">=0.4.0"
+  },
+  "licenses": [
+    {
+      "type": "GPL",
+      "url": "http://github.com/JaniL/srcdslog/raw/master/COPYING"
+    }
+  ],
+  "dependencies": {
+    "debug": "^2.2.0",
+    "re2": "^1.3.3"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0"
+  }
 }
-
