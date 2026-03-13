@@ -1,27 +1,57 @@
 srcdslog
 ========
 
-Srcdslog is node.js module for parsing srcds's logs.
+Srcdslog is a Node.js module for parsing SRCDS logs.
 
-Be warned, this is far from ready.
+Install
+-------
 
-Usage
+```bash
+npm install
+```
+
+Build
 -----
 
-    var srcdslog = require('./lib/srcdslog.js');
-    
-    srcdslog.parseLine('L 11/23/2011 - 14:30:01: "Jarppa!<4><STEAM_0:0:17784529><Blue>' say "asd"",function(info) {
-      console.log(info);
-    });
+```bash
+npm run build
+```
 
-Result:
+API
+---
 
-    { type: 'say',
-      player:
-       { name: 'Jarppa!',
-         id: 4,
-         steamid: 'STEAM_0:0:17784529',
-         team: 'Blue' },
-      text: 'fasd' }
+New API (recommended):
 
-Somes lines aren't recognized by srcdslog yet.
+```js
+const srcdslog = require('./lib/srcdslog.js');
+
+const result = srcdslog.parse(
+  'L 01/02/2026 - 10:11:12: "PlayerA<1><[U:1:111111]><Red>" triggered "shot_fired" (weapon "scattergun")'
+);
+
+console.log(result);
+```
+
+Legacy callback API (still supported):
+
+```js
+const srcdslog = require('./lib/srcdslog.js');
+
+srcdslog.parseLine(
+  'L 01/02/2026 - 10:11:12: "PlayerA<1><[U:1:111111]><Red>" say "hello"',
+  (info) => {
+    console.log(info);
+  }
+);
+```
+
+When a line is not recognized:
+- `parse(line)` returns `null`
+- `parseLine(line, callback)` invokes callback with `false`
+
+Tests
+-----
+
+```bash
+npm test
+```
