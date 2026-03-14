@@ -1,6 +1,6 @@
 {
   "name": "srcdslog",
-  "description": "SRCDS log parsing module",
+  "description": "SRCDS log parsing module (not actively maintained)",
   "version": "0.2.0",
   "author": "Jani Luukko <jj.luukko@gmail.com>",
   "contributors": [],

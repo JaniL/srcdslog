@@ -3,6 +3,11 @@ srcdslog
 
 Srcdslog is a Node.js module for parsing SRCDS logs.
 
+Maintenance Status
+------------------
+
+This library is not actively maintained.
+
 Install
 -------
 
